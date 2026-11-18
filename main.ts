@@ -1,4 +1,4 @@
-input.onButtonPressed(Button.A, function () {
+input.onPinPressed(TouchPin.P0, function () {
     if (süre == 0) {
         süre = 5
         basic.showNumber(süre)
@@ -13,10 +13,11 @@ input.onButtonPressed(Button.A, function () {
         WaitUntilBlocks.waitUntilPinPressed(TouchPin.P1)
         music._playDefaultBackground(music.builtInPlayableMelody(Melodies.Wawawawaa), music.PlaybackMode.UntilDone)
         basic.showString("CARPTIN")
-        WaitUntilBlocks.waitUntilPinPressed(TouchPin.P2)
-        music._playDefaultBackground(music.builtInPlayableMelody(Melodies.BaDing), music.PlaybackMode.UntilDone)
-        basic.showString("KAZANDIN!")
     }
+})
+input.onPinPressed(TouchPin.P2, function () {
+    music._playDefaultBackground(music.builtInPlayableMelody(Melodies.BaDing), music.PlaybackMode.UntilDone)
+    basic.showString("KAZANDIN!")
 })
 let süre = 0
 süre = 0
