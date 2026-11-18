@@ -11,11 +11,13 @@ input.onPinPressed(TouchPin.P0, function () {
     basic.clearScreen()
     while (true) {
         WaitUntilBlocks.waitUntilPinPressed(TouchPin.P1)
+        radio.sendNumber(0)
         music._playDefaultBackground(music.builtInPlayableMelody(Melodies.Wawawawaa), music.PlaybackMode.UntilDone)
         basic.showString("CARPTIN")
     }
 })
 input.onPinPressed(TouchPin.P2, function () {
+    radio.sendNumber(1)
     music._playDefaultBackground(music.builtInPlayableMelody(Melodies.BaDing), music.PlaybackMode.UntilDone)
     basic.showString("KAZANDIN!")
 })
